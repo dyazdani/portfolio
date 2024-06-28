@@ -6,7 +6,7 @@ function App() {
 
   return (
     <Grommet theme={theme} full>   
-    
+    <h1>Dara Yazdani</h1>
     </Grommet>
   )
 }
