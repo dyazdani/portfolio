@@ -1,12 +1,12 @@
 import { Grommet } from 'grommet';
 import theme from './theme';
-import Headshot from './client/components/Headshot';
+import CollapsibleNav from './client/components/CollapsibleNav';
 
 function App() {
 
   return (
     <Grommet theme={theme} full>   
-    <Headshot/>
+    <CollapsibleNav></CollapsibleNav>
     </Grommet>
   )
 }
