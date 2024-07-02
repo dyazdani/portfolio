@@ -1,4 +1,4 @@
-import { Anchor, Avatar, Box, Header, Menu, Nav, ResponsiveContext } from 'grommet'
+import { Anchor, Avatar, Box, Header, Heading, Menu, Nav, ResponsiveContext } from 'grommet'
 
 const CollapsibleNav = () => {
     return (
@@ -8,8 +8,16 @@ const CollapsibleNav = () => {
                 align="center" 
                 gap="small"
             >
-                <Avatar src={'headshot-circle.png'}/>
-                Dara Yazdani
+                <Avatar 
+                    src={'headshot-circle.png'} 
+                    size='medium'
+                />
+                <Heading 
+                    size='small' 
+                    margin='xsmall'
+                >
+                    Dara Yazdani
+                </Heading>
             </Box>
             <ResponsiveContext.Consumer>
             {(responsive) =>
