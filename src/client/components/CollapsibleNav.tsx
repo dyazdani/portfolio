@@ -9,14 +9,20 @@ const CollapsibleNav = () => {
                 <Menu
                     label="Menu"
                     items={[
-                    { label: 'LinkedIn', onClick: () => {} },
-                    { label: 'GitHub', onClick: () => {} },
+                    { label: 'Home', onClick: () => {} },
+                    { label: 'About', onClick: () => {} },
+                    { label: 'Projects', onClick: () => {} },    
+                    { label: 'Resume', onClick: () => {} },
+                    { label: 'Contact', onClick: () => {} },
                     ]}
                 />
                 ) : (
                 <Nav direction="row">
-                    <Anchor href="#" label="LinkedIn" />
-                    <Anchor href="#" label="GitHub" />
+                    <Anchor href="#" label="Home" />
+                    <Anchor href="#" label="About" />
+                    <Anchor href="#" label="Projects" />
+                    <Anchor href="#" label="Resume" />
+                    <Anchor href="#" label="Contact" />
                 </Nav>
                 )
             }
