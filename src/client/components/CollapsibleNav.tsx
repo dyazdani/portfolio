@@ -1,8 +1,14 @@
-import { Anchor, Header, Menu, Nav, ResponsiveContext } from 'grommet'
+import { Anchor, Box, Header, Menu, Nav, ResponsiveContext } from 'grommet'
 
 const CollapsibleNav = () => {
     return (
-        <Header background="dark-1" pad="medium">
+        <Header background="dark-1" pad="small">
+            <Box 
+                direction="row"
+                align="center"
+                gap="small"
+            >
+            </Box>
             <ResponsiveContext.Consumer>
             {(responsive) =>
                 responsive === 'small' ? (
