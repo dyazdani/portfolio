@@ -2,7 +2,10 @@ import { Anchor, Avatar, Box, Header, Heading, Menu, Nav, ResponsiveContext } fr
 
 const CollapsibleNav = () => {
     return (
-        <Header background="dark-1" pad="small">
+        <Header 
+            background="dark-1" 
+            pad="small"
+        >
             <Box 
                 direction="row" 
                 align="center" 
