@@ -9,6 +9,7 @@ import {
 } from 'grommet';
 import theme from './theme';
 import CollapsibleNav from './client/components/CollapsibleNav';
+import { Github, Linkedin, Youtube } from 'grommet-icons';
 
 function App() {
 
@@ -30,9 +31,9 @@ function App() {
         direction="row" 
         pad="medium"
       >
-        <Anchor icon={} />
-        <Anchor icon={} />
-        <Anchor icon={} />
+        <Anchor icon={<Github/>} href='https://github.com/dyazdani'  target='_blank'/>
+        <Anchor icon={<Linkedin/>} href='https://www.linkedin.com/in/darayazdani/'  target='_blank'/>
+        <Anchor icon={<Youtube/>} href='https://youtu.be/_61FuWa92Wo' target='_blank'/>
       </Nav>
     </Main>
     </Grommet>
