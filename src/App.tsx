@@ -1,4 +1,11 @@
-import { Grommet, Heading, Main, Paragraph } from 'grommet';
+import { 
+  Button, 
+  Grommet, 
+  Main, 
+  Page, 
+  PageContent, 
+  PageHeader 
+} from 'grommet';
 import theme from './theme';
 import CollapsibleNav from './client/components/CollapsibleNav';
 
@@ -8,21 +15,22 @@ function App() {
     <Grommet theme={theme} full>   
     <CollapsibleNav></CollapsibleNav>
     <Main>
-      <Heading
-        level={1}
-        textAlign="center"
-        fill
+      <Page
+        kind="narrow"
       >
-        Hi, I'm Dara :-)
-      </Heading>
-      <Paragraph
-        textAlign="center"
-        fill
-        size="large"
-      >
-        I build full-stack web applications and websites.
-      </Paragraph>
-
+        <PageContent>
+          <PageHeader
+            title="Hi, I'm Dara :-)"
+            subtitle="I build full-stack web applications and websites."
+          />
+          <Button 
+            label="Projects"
+            style={{
+              width: "125px"
+            }}
+          />
+        </PageContent>
+      </Page>
     </Main>
     </Grommet>
   )
