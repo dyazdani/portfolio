@@ -1,5 +1,4 @@
 import { 
-  Button, 
   Grommet, 
   Main, 
   Page, 
@@ -22,7 +21,6 @@ function App() {
           <PageHeader
             title="Hi, I'm Dara :-)"
             subtitle="I build full-stack web applications and websites."
-            actions={<Button label="Projects"/>}
           />
         </PageContent>
       </Page>
