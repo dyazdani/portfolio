@@ -1,6 +1,8 @@
 import { 
+  Anchor,
   Grommet, 
   Main, 
+  Nav, 
   Page, 
   PageContent, 
   PageHeader 
@@ -24,6 +26,14 @@ function App() {
           />
         </PageContent>
       </Page>
+      <Nav 
+        direction="row" 
+        pad="medium"
+      >
+        <Anchor icon={} />
+        <Anchor icon={} />
+        <Anchor icon={} />
+      </Nav>
     </Main>
     </Grommet>
   )
