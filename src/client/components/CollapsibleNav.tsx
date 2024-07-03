@@ -5,6 +5,10 @@ const CollapsibleNav = () => {
         <Header 
             background="dark-1" 
             pad="small"
+            style={{
+                position: "sticky",
+                top: "0px"
+            }}
         >
             <Box 
                 direction="row" 
