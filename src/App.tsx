@@ -1,7 +1,6 @@
 import { 
   Anchor,
-  Grommet, 
-  Main, 
+  Grommet,  
   Nav, 
   Page, 
   PageContent, 
