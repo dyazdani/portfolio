@@ -23,7 +23,7 @@ function App() {
         <PageContent>
           <PageHeader
             title="Hi, I'm Dara :-)"
-            subtitle="I build full-stack web applications and websites."
+            subtitle="I build full-stack web applications and websites. I am building this portfolio site right now! More coming soon..."
           />
         </PageContent>
       </Page>
