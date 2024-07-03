@@ -22,12 +22,7 @@ function App() {
           <PageHeader
             title="Hi, I'm Dara :-)"
             subtitle="I build full-stack web applications and websites."
-          />
-          <Button 
-            label="Projects"
-            style={{
-              width: "125px"
-            }}
+            actions={<Button label="Projects"/>}
           />
         </PageContent>
       </Page>
