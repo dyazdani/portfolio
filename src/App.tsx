@@ -15,8 +15,7 @@ function App() {
 
   return (
     <Grommet theme={theme} full>   
-    <CollapsibleNav></CollapsibleNav>
-    <Main>
+      <CollapsibleNav></CollapsibleNav>
       <Page
         kind="narrow"
       >
@@ -35,8 +34,6 @@ function App() {
           </Nav>
         </PageContent>
       </Page>
-   
-    </Main>
     </Grommet>
   )
 }
