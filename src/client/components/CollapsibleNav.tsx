@@ -35,7 +35,7 @@ const CollapsibleNav = () => {
             </Box>
             <Nav direction="row">
                 <Anchor 
-                    href="dara-yazdani-résumé.pdf" 
+                    href="/public/dara-yazdani-résumé.pdf" 
                     label="Résumé" 
                     download
                 />
