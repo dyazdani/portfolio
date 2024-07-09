@@ -1,12 +1,9 @@
 import { 
-    Anchor, 
     Avatar, 
     Box, 
     Header, 
     Heading,  
-    Nav 
 } from 'grommet'
-import resume from '../../documents/dara-yazdani-résumé.pdf';
 
 
 const CollapsibleNav = () => {
@@ -35,13 +32,6 @@ const CollapsibleNav = () => {
                     Dara Yazdani
                 </Heading>
             </Box>
-            <Nav direction="row">
-                <Anchor 
-                    href={resume} 
-                    label="Résumé" 
-                    target='_blank'
-                />
-            </Nav>
         </Header>
     )
 }
