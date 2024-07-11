@@ -1,10 +1,13 @@
 import { 
+    Anchor, 
     Avatar, 
     Box, 
     Header, 
-    Heading,  
+    Heading, 
+    Menu, 
+    Nav, 
+    ResponsiveContext 
 } from 'grommet'
-
 
 const CollapsibleNav = () => {
     return (
@@ -22,7 +25,7 @@ const CollapsibleNav = () => {
                 gap="small"
             >
                 <Avatar 
-                    src={'headshot-circle.png'} 
+                    src='/src/assets/headshot-circle.png'
                     size='medium'
                 />
                 <Heading 
@@ -32,6 +35,25 @@ const CollapsibleNav = () => {
                     Dara Yazdani
                 </Heading>
             </Box>
+            <ResponsiveContext.Consumer>
+            {(responsive) =>
+                responsive === 'small' ? (
+                <Menu
+                    label="Menu"
+                    items={[  
+                    { label: 'Résumé', onClick: () => {} },
+                    ]}
+                />
+                ) : (
+                <Nav direction="row">
+                    <Anchor 
+                    href='/src/assets/dara-yazdani-résumé.pdf'
+                    label="Résumé"
+                    target="_blank" />
+                </Nav>
+                )
+            }
+            </ResponsiveContext.Consumer>
         </Header>
     )
 }
