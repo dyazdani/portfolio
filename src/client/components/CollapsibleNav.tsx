@@ -25,7 +25,7 @@ const CollapsibleNav = () => {
                 gap="small"
             >
                 <Avatar 
-                    src='/src/assets/headshot-circle.png'
+                    src='/headshot-circle.png'
                     size='medium'
                 />
                 <Heading 
@@ -47,7 +47,7 @@ const CollapsibleNav = () => {
                 ) : (
                 <Nav direction="row">
                     <Anchor 
-                    href='/src/assets/dara-yazdani-résumé.pdf'
+                    href='/dara-yazdani-résumé.pdf'
                     label="Résumé"
                     target="_blank" />
                 </Nav>
