@@ -41,15 +41,16 @@ const CollapsibleNav = () => {
                 <Menu
                     label="Menu"
                     items={[  
-                    { label: 'Résumé', onClick: () => {} },
+                    { label: 'Resume', onClick: () => {} },
                     ]}
                 />
                 ) : (
                 <Nav direction="row">
                     <Anchor 
-                    href='/dara-yazdani-résumé.pdf'
-                    label="Résumé"
-                    target="_blank" />
+                        href='/dara-yazdani-resume.pdf'
+                        label="Resume"
+                        target="_blank" 
+                    />
                 </Nav>
                 )
             }
