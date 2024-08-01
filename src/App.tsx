@@ -36,6 +36,16 @@ function App() {
           />
         </PageContent>
       </Page>
+      <Page
+        kind="narrow"
+        id="about"
+      >
+        <PageContent>
+          <PageHeader
+            title="About"
+          />
+        </PageContent>
+      </Page>
     </Main>
     </Grommet>
   )
