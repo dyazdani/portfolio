@@ -3,8 +3,8 @@ import { Box, Image } from "grommet";
 const Headshot = () => {
     return (
         <Box 
-            height="large" 
-            width="large" 
+            height="medium" 
+            width="medium" 
             responsive={true}
             alignSelf="center"
         >
