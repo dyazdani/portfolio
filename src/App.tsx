@@ -13,8 +13,11 @@ function App() {
 
   return (
     <Grommet theme={theme} full>   
-    <CollapsibleNav></CollapsibleNav>
-    <Main>
+    <Main
+      background="pink"
+      height="100%"
+    >
+      <CollapsibleNav></CollapsibleNav>
       <Headshot/>
       <Page
         kind="narrow"
