@@ -2,10 +2,17 @@ import { Box, Image } from "grommet";
 
 const Headshot = () => {
     return (
-        <Box height="medium" width="medium">
+        <Box 
+            height="large" 
+            width="large" 
+            responsive={true}
+            alignSelf="center"
+        >
             <Image
-                fit="cover"
-                src="headshot.jpg"
+                fit="contain"
+                src="headshot-circle.png"
+                margin="medium"
+                alt="Dara Yazdani headshot"
             />
         </Box>
     )
