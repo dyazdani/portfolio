@@ -1,6 +1,5 @@
 import { 
-    Anchor, 
-    Avatar, 
+    Anchor,  
     Box, 
     Header, 
     Heading, 
@@ -24,10 +23,6 @@ const CollapsibleNav = () => {
                 align="center" 
                 gap="small"
             >
-                <Avatar 
-                    src={'headshot-circle.png'} 
-                    size='medium'
-                />
                 <Heading 
                     size='small' 
                     margin='xsmall'
