@@ -39,7 +39,7 @@ function App() {
           level={1}
           alignSelf='center'
         > 
-          Hi, I'm Dara :-)
+          About Me
         </Heading>
         <Heading 
           gridArea="subtitle" 
