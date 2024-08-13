@@ -40,6 +40,7 @@ const CollapsibleNav = () => {
                     label="Menu"
                     items={[
                     { label: 'About', onClick: () => {} },
+                    { label: 'Projects', onClick: () => {} },
                     { label: 'Resume', onClick: () => {} },
                     ]}
                 />
@@ -47,6 +48,9 @@ const CollapsibleNav = () => {
                 <Nav direction="row">
                     <NavLink to="/about">
                         <Anchor label="About" />
+                    </NavLink>
+                    <NavLink to="/projects">
+                        <Anchor label="Projects" />
                     </NavLink>
                     <Anchor href="#" label="Resume" />
                 </Nav>

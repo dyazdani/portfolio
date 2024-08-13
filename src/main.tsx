@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 import Home from './Home.tsx'
 import './index.css'
-import AboutPage from './client/components/About.tsx';
+import About from './client/components/About.tsx';
+import Projects from './client/components/Projects.tsx';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/about",
-    element: <AboutPage/>
+    element: <About/>
+  },
+  {
+    path: "/projects",
+    element: <Projects/>
   }
 ]);
 
