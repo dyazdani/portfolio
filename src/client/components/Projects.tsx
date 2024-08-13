@@ -1,7 +1,8 @@
 import { 
+    Box,
     Grommet, 
-    Main, 
-    Paragraph 
+    Heading, 
+    Main
 } from "grommet";
 import theme from "../../theme";
 import CollapsibleNav from "./CollapsibleNav";
@@ -16,7 +17,38 @@ const Projects = () => {
             background="#EAD6DF"
             >
                 <CollapsibleNav/>
-                <Paragraph>Projects</Paragraph>
+                <Heading
+                    level={1}
+                    alignSelf="center"
+                >
+                    Projects
+                </Heading>
+                <Box
+                    alignSelf="center"
+                    width="90vw"
+                    pad={"small"}
+                    responsive
+                >
+                <Heading
+                    level={2}
+                    style={{
+                        marginBottom: "0"
+                    }}
+                >
+                    Trac
+                </Heading>
+                <Heading
+                    level={4} 
+                    fill  
+                    style={{
+                        marginTop: "1rem"
+                    }}                 
+                >
+                    A single-page web application for tracking goals and updating friends on your progress.
+
+                </Heading>
+                </Box>
+
             </Main>
         </Grommet>
     )
