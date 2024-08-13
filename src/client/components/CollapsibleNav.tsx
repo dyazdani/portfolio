@@ -1,6 +1,5 @@
 import { 
-    Anchor, 
-    Avatar, 
+    Anchor,  
     Box, 
     Header, 
     Heading, 
@@ -8,6 +7,7 @@ import {
     Nav, 
     ResponsiveContext 
 } from 'grommet'
+import { NavLink } from 'react-router-dom';
 
 const CollapsibleNav = () => {
     return (
@@ -24,33 +24,31 @@ const CollapsibleNav = () => {
                 align="center" 
                 gap="small"
             >
-                <Avatar 
-                    src='/headshot-circle.png'
-                    size='medium'
-                />
-                <Heading 
-                    size='small' 
-                    margin='xsmall'
-                >
-                    Dara Yazdani
-                </Heading>
+                <NavLink to="/">
+                    <Heading 
+                        size='small' 
+                        margin='xsmall'
+                    >
+                        <Anchor>Dara Yazdani</Anchor>
+                    </Heading>
+                </NavLink>
             </Box>
             <ResponsiveContext.Consumer>
             {(responsive) =>
                 responsive === 'small' ? (
                 <Menu
                     label="Menu"
-                    items={[  
+                    items={[
+                    { label: 'About', onClick: () => {} },
                     { label: 'Resume', onClick: () => {} },
                     ]}
                 />
                 ) : (
                 <Nav direction="row">
-                    <Anchor 
-                        href='/dara-yazdani-resume.pdf'
-                        label="Resume"
-                        target="_blank" 
-                    />
+                    <NavLink to="/about">
+                        <Anchor label="About" />
+                    </NavLink>
+                    <Anchor href="#" label="Resume" />
                 </Nav>
                 )
             }
