@@ -5,7 +5,6 @@ import {
 } from 'grommet';
 import theme from './theme';
 import CollapsibleNav from './client/components/CollapsibleNav';
-import Headshot from './client/components/Headshot';
 
 function Home() {
   return (
@@ -17,7 +16,6 @@ function Home() {
         background="#EAD6DF"
       >
         <CollapsibleNav></CollapsibleNav>
-        <Headshot/>
         <Heading 
           alignSelf='center'
         > 
