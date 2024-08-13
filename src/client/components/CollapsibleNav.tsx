@@ -7,6 +7,7 @@ import {
     Nav, 
     ResponsiveContext 
 } from 'grommet'
+import { NavLink } from 'react-router-dom';
 
 const CollapsibleNav = () => {
     return (
@@ -23,12 +24,14 @@ const CollapsibleNav = () => {
                 align="center" 
                 gap="small"
             >
-                <Heading 
-                    size='small' 
-                    margin='xsmall'
-                >
-                    Dara Yazdani
-                </Heading>
+                <NavLink to="/">
+                    <Heading 
+                        size='small' 
+                        margin='xsmall'
+                    >
+                        <Anchor>Dara Yazdani</Anchor>
+                    </Heading>
+                </NavLink>
             </Box>
             <ResponsiveContext.Consumer>
             {(responsive) =>
@@ -42,7 +45,9 @@ const CollapsibleNav = () => {
                 />
                 ) : (
                 <Nav direction="row">
-                    <Anchor href="#" label="About" />
+                    <NavLink to="/about">
+                        <Anchor label="About" />
+                    </NavLink>
                     <Anchor href="#" label="Resume" />
                 </Nav>
                 )
