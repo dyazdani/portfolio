@@ -14,7 +14,7 @@ function App() {
   return (
     <Grommet theme={theme} full>   
     <Main
-      background="#d7b7c7"
+      background="#EAD6DF"
     >
       <CollapsibleNav></CollapsibleNav>
       <Grid
