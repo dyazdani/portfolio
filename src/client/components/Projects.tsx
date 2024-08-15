@@ -44,7 +44,7 @@ const Projects = () => {
                         Trac
                     </Heading>
                     <Heading
-                        level={5} 
+                        level={3} 
                         fill  
                         margin="0"
                         style={{
@@ -52,7 +52,7 @@ const Projects = () => {
                             textAlign: "center"
                         }}
                     >
-                        A single-page web application for tracking goals and updating friends on your progress.
+                        A full-stack, single-page web application for tracking goals and updating friends on your progress.
                     </Heading>
                     <ResponsiveContext.Consumer>
                         {size => (
