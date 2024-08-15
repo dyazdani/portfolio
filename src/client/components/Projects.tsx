@@ -4,23 +4,13 @@ import {
     Grommet, 
     Heading, 
     Main,
-    ResponsiveContext
+    ResponsiveContext,
+    Image
 } from "grommet";
 import theme from "../../theme";
 import CollapsibleNav from "./CollapsibleNav";
 
 const Projects = () => {
-
-    const rowButtonBoxStyle = {
-        display: "flex",
-        flexFlow: "row",
-        justifyItems: "center"
-    }
-    const columnButtonBoxStyle = {
-        display: "flex",
-        flexFlow: "column",
-        alignItems: "center"
-    }
 
     return (
         <Grommet 
@@ -28,7 +18,11 @@ const Projects = () => {
             full
         >   
             <Main
-            background="#EAD6DF"
+                background="#EAD6DF"
+                style={{
+                    minHeight: "100vh"
+                }}
+                overflow="auto"
             >
                 <CollapsibleNav/>
                 <Box
@@ -62,43 +56,57 @@ const Projects = () => {
                     </Heading>
                     <ResponsiveContext.Consumer>
                         {size => (
-                            <Box
-                            style={size === "small" ? columnButtonBoxStyle : rowButtonBoxStyle}
-                            justify="around"
-                        >
-                            <Button 
-                                href="https://trac-kl33.onrender.com" 
-                                label="Visit App"
-                                target="_blank"
-                                margin="1rem"
-                                style={{
-                                    textAlign: "center"
-                                }}
-                            />
-                            <Button 
-                                href="https://youtu.be/_61FuWa92Wo"
-                                label="Watch Demo"
-                                target="_blank"
-                                margin="1rem"
-                                style={{
-                                    textAlign: "center"
-                                }}
-                            />
-                            <Button 
-                                href="https://github.com/dyazdani/trac"
-                                label="View Code"
-                                target="_blank"
-                                margin="1rem"
-                                style={{
-                                    textAlign: "center"
-                                }}
-                            />
-                        </Box>
-                        )}
+                            <>
+                                <Box
+                                    style={{
+                                        display: "flex",
+                                        flexFlow: `${size === "small" ? "column" : "row"}`,
+                                        alignItems: "center",
+                                        minHeight: "fit-content"
+                                    }}
+                                    justify="around"
+                                >
+                                    <Button 
+                                        href="https://trac-kl33.onrender.com" 
+                                        label="Visit App"
+                                        target="_blank"
+                                        margin="1rem"
+                                        style={{
+                                            textAlign: "center"
+                                        }}
+                                    />
+                                    <Button 
+                                        href="https://youtu.be/_61FuWa92Wo"
+                                        label="Watch Demo"
+                                        target="_blank"
+                                        margin="1rem"
+                                        style={{
+                                            textAlign: "center"
+                                        }}
+                                    />
+                                    <Button 
+                                        href="https://github.com/dyazdani/trac"
+                                        label="View Code"
+                                        target="_blank"
+                                        margin="1rem"
+                                        style={{
+                                            textAlign: "center",
+                                        }}
+                                    />
+                                </Box>
+                                    <Image 
+                                        src="trac-screenshot.png"
+                                        style={{
+                                            width: "80vw",
+                                            padding: "1rem",
+                                            maxWidth: "800px"
+                                        }}
+                                    />
+                                
+                            </>
+                        )}    
                     </ResponsiveContext.Consumer>
-                    
                 </Box>
-                
             </Main>
         </Grommet>
     )
