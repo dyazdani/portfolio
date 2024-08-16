@@ -1,17 +1,20 @@
-import { Box, Image } from "grommet";
-
+import { 
+    Box, 
+    Image 
+} from "grommet";
 
 const Headshot = () => {
     return (
         <Box 
-            height="auto" 
-            width="auto"
+            height="fit-content" 
+            width="fit-content"
             style={{
                 maxHeight: "400px",
+                minWidth: "300px",
+                minHeight: "300px"
             }} 
-            responsive={true}
             alignSelf="center"
-            gridArea="headshot"
+            gridArea="headshot" 
         >
             <Image
                 fit="contain"
