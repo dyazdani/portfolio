@@ -7,9 +7,13 @@ import {
     Nav, 
     ResponsiveContext 
 } from 'grommet'
-import { NavLink } from 'react-router-dom';
+import { 
+    NavLink, 
+    useNavigate 
+} from 'react-router-dom';
 
 const CollapsibleNav = () => {
+    const navigate = useNavigate();
     return (
         <Header 
             background="dark-1" 
@@ -39,9 +43,24 @@ const CollapsibleNav = () => {
                 <Menu
                     label="Menu"
                     items={[
-                    { label: 'About', onClick: () => {} },
-                    { label: 'Projects', onClick: () => {} },
-                    { label: 'Resume', onClick: () => {} },
+                        { 
+                            label: 'About', 
+                            onClick: () => {
+                                navigate('/about');
+                            }
+                        },
+                        { 
+                            label: 'Projects', 
+                            onClick: () => {
+                                navigate('/projects');
+                            }
+                        },
+                        { 
+                            label: 'Resume', 
+                            onClick: () => {
+                                
+                            } 
+                        }
                     ]}
                 />
                 ) : (
