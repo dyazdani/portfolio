@@ -3,10 +3,12 @@ import {
     Grommet, 
     Heading, 
     Main,
+    Text
 } from "grommet";
 import theme from "../../theme";
 import CollapsibleNav from "./CollapsibleNav";
 import TracProject from "./TracProject";
+import ZoopProject from "./ZoopProject";
 
 const Projects = () => {
 
@@ -36,6 +38,13 @@ const Projects = () => {
                         Projects
                     </Heading>
                     <TracProject/>
+                    <Text
+                        alignSelf="center"
+                        margin="2rem 0"
+                    >
+                        ---------
+                    </Text>
+                    <ZoopProject/>
                 </Box>
             </Main>
         </Grommet>
