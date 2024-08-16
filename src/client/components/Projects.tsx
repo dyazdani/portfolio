@@ -5,7 +5,8 @@ import {
     Heading, 
     Main,
     ResponsiveContext,
-    Image
+    Image,
+    List
 } from "grommet";
 import theme from "../../theme";
 import CollapsibleNav from "./CollapsibleNav";
@@ -44,7 +45,7 @@ const Projects = () => {
                         Trac
                     </Heading>
                     <Heading
-                        level={3} 
+                        level={4} 
                         fill  
                         margin="0"
                         style={{
@@ -94,15 +95,80 @@ const Projects = () => {
                                         }}
                                     />
                                 </Box>
-                                    <Image 
-                                        src="trac-screenshot.png"
-                                        style={{
-                                            width: "80vw",
-                                            padding: "1rem",
-                                            maxWidth: "800px"
-                                        }}
-                                    />
+                                <Image 
+                                    src="trac-screenshot.png"
+                                    style={{
+                                        width: "80vw",
+                                        padding: "1rem",
+                                        maxWidth: "800px"
+                                    }}
+                                />
+                                <Heading
+                                    level={3}
+                                >
+                                    Built with:
+                                </Heading>
                                 
+                                {size === "small" ? 
+                                    (
+                                        <List
+                                            data={[
+                                                {name: "JavaScript"},
+                                                {name: "TypeScript"},
+                                                {name: "React"},
+                                                {name: "Node.js"},
+                                                {name: "Postgres"},
+                                                {name: "Prisma"},
+                                                {name: "Redux"},
+                                                {name: "Redux Toolkit"},
+                                                {name: "Express.js"},
+                                                {name: "Chakra UI"},
+                                                {name: "Vite"},
+                                                {name: "Knock.js"},
+                                            ]}
+                                            margin="1rem"
+                                            alignSelf="center"
+                                        />              
+                                    ) : (
+                                        <Box
+                                            style={{
+                                                display: "flex",
+                                                flexFlow: "row",
+                                                alignItems: "start",
+                                                minHeight: "fit-content"
+                                            }}
+                                            width="fit-content"
+                                        >
+                                            <List
+                                                data={[
+                                                    {name: "JavaScript"},
+                                                    {name: "TypeScript"},
+                                                    {name: "React"},
+                                                    {name: "Node.js"}
+                                                ]}
+                                                margin="1rem"
+                                            />
+                                            <List
+                                                data={[
+                                                    {name: "Postgres"},
+                                                    {name: "Prisma"},
+                                                    {name: "Redux"},
+                                                    {name: "Redux Toolkit"}
+                                                ]}
+                                                margin="1rem"
+                                            />
+                                            <List
+                                                data={[
+                                                    {name: "Express.js"},
+                                                    {name: "Chakra UI"},
+                                                    {name: "Vite"},
+                                                    {name: "Knock.js"}
+                                                ]}
+                                                margin="1rem"
+                                            />
+                                        </Box>      
+                                    )
+                                }
                             </>
                         )}    
                     </ResponsiveContext.Consumer>
