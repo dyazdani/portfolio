@@ -57,21 +57,34 @@ const CollapsibleNav = () => {
                         },
                         { 
                             label: 'Resume', 
-                            onClick: () => {
-                                
-                            } 
+                            href: 'dara-yazdani-resume.pdf',
+                            target: "_blank"
                         }
                     ]}
                 />
                 ) : (
-                <Nav direction="row">
-                    <NavLink to="/about">
-                        <Anchor label="About" />
+                <Nav 
+                    direction="row"
+                >
+                    <NavLink 
+                        to="/about"
+                    >
+                        <Anchor 
+                            label="About" 
+                        />
                     </NavLink>
-                    <NavLink to="/projects">
-                        <Anchor label="Projects" />
+                    <NavLink 
+                        to="/projects"
+                    >
+                        <Anchor 
+                            label="Projects" 
+                        />
                     </NavLink>
-                    <Anchor href="#" label="Resume" />
+                    <Anchor 
+                        href='dara-yazdani-resume.pdf'
+                        label="Resume"
+                        target="_blank" 
+                    />
                 </Nav>
                 )
             }
