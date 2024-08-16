@@ -9,6 +9,7 @@ import theme from "../../theme";
 import CollapsibleNav from "./CollapsibleNav";
 import TracProject from "./TracProject";
 import ZoopProject from "./ZoopProject";
+import AvocadoUIProject from "./AvocadoUIProject";
 
 const Projects = () => {
 
@@ -45,6 +46,13 @@ const Projects = () => {
                         ---------
                     </Text>
                     <ZoopProject/>
+                    <Text
+                        alignSelf="center"
+                        margin="2rem 0"
+                    >
+                        ---------
+                    </Text>
+                    <AvocadoUIProject/>
                 </Box>
             </Main>
         </Grommet>
