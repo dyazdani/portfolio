@@ -25,7 +25,7 @@ const ZoopProject = () => {
                     textAlign: "center"
                 }}
             >
-                A full-stack, single-page web application for sending messages to users and "fave-ing them".
+                A full-stack, single-page web application for sending messages to users and "fave-ing" them.
             </Heading>
             <ResponsiveContext.Consumer>
                 {size => (
