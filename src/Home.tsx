@@ -23,6 +23,9 @@ function Home() {
     >   
       <Main
         background="#EAD6DF"
+        style={{
+          height: "100dvh"
+        }}
       >
         <CollapsibleNav></CollapsibleNav>
         <Headshot/>

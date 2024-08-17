@@ -9,7 +9,7 @@ const Headshot = () => {
             height="fit-content" 
             width="fit-content"
             style={{
-                maxHeight: "40vh",
+                maxHeight: "40dvh",
                 minWidth: "300px",
                 minHeight: "300px"
             }} 
