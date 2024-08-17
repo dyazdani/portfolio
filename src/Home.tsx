@@ -30,6 +30,7 @@ function Home() {
         <Heading 
           level={2}
           alignSelf='center'
+          textAlign='center'
         >
           I’m a full-stack JavaScript engineer in web.
         </Heading>
