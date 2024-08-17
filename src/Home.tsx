@@ -3,7 +3,8 @@ import {
   Button,
   Grommet, 
   Heading, 
-  Main
+  Main,
+  ResponsiveContext
 } from 'grommet';
 import theme from './theme';
 import CollapsibleNav from './client/components/CollapsibleNav';
@@ -34,49 +35,55 @@ function Home() {
         >
           I’m a full-stack JavaScript engineer in web.
         </Heading>
-        <Box
-          style={{
-            display: "flex",
-            flexFlow: "row",
-            alignItems: "center",
-            minHeight: "fit-content",
-            minWidth: "400px"
-          }}
-            justify="around"
-            width="30vw"
-            alignSelf='center'
-            margin="2rem 0"
-        >
-          <Button 
-            label="About"
-            margin="1rem"
+        <ResponsiveContext.Consumer>
+          {size => (
+            <Box
             style={{
-              textAlign: "center"
+              display: "flex",
+              flexFlow: `${size === "small" ? "column" : "row"}`,
+              alignItems: "center",
+              minHeight: "fit-content",
+              minWidth: "400px"
             }}
-            onClick={() => {
-              navigate('/about');
-            }}
-          />
-          <Button 
-            label="Projects"
-            margin="1rem"
-            style={{
-              textAlign: "center"
-            }}
-            onClick={() => {
-              navigate('/projects');
-            }}
-          />
-          <Button 
-            href="dara-yazdani-resume.pdf"
-            label="Resume"
-            target='_blank'
-            margin="1rem"
-            style={{
-              textAlign: "center",
-            }}
-          />
-        </Box>
+              justify="around"
+              width="30vw"
+              alignSelf='center'
+              margin="2rem 0"
+          >
+            <Button 
+              label="About"
+              margin="1rem"
+              style={{
+                textAlign: "center"
+              }}
+              onClick={() => {
+                navigate('/about');
+              }}
+            />
+            <Button 
+              label="Projects"
+              margin="1rem"
+              style={{
+                textAlign: "center"
+              }}
+              onClick={() => {
+                navigate('/projects');
+              }}
+            />
+            <Button 
+              href="dara-yazdani-resume.pdf"
+              label="Resume"
+              target='_blank'
+              margin="1rem"
+              style={{
+                textAlign: "center",
+              }}
+            />
+          </Box>
+          )
+
+          }
+        </ResponsiveContext.Consumer>
       </Main>
     </Grommet>
   )
