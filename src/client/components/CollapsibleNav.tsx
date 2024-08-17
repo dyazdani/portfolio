@@ -39,7 +39,7 @@ const CollapsibleNav = () => {
             </Box>
             <ResponsiveContext.Consumer>
             {(responsive) =>
-                responsive === 'small' ? (
+                responsive === 'medium' || responsive === 'small' ? (
                 <Menu
                     label="Menu"
                     items={[

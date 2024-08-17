@@ -33,7 +33,7 @@ const AvocadoUIProject = () => {
                         <Box
                             style={{
                                 display: "flex",
-                                flexFlow: `${size === "small" ? "column" : "row"}`,
+                                flexFlow: `${size === "medium" || size === "small" || size === "small" ? "column" : "row"}`,
                                 alignItems: "center",
                                 minHeight: "fit-content"
                             }}
@@ -72,7 +72,7 @@ const AvocadoUIProject = () => {
                             Built with:
                         </Heading>
                         
-                        {size === "small" ? 
+                        {size === "medium" || size === "small" ? 
                             (
                                 <List
                                     data={[
