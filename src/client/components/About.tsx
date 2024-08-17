@@ -15,7 +15,7 @@ const About = () => {
         <ResponsiveContext.Consumer>
           {size => (
             <>
-              {size === "small" ? (
+              {size === "medium" || size === "small" || size === "small"? (
                 <>
                   <Heading 
                     gridArea="title" 
