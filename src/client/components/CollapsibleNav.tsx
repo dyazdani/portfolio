@@ -7,6 +7,7 @@ import {
     Nav, 
     ResponsiveContext 
 } from 'grommet'
+import { Github, Linkedin, Youtube } from 'grommet-icons';
 import { 
     NavLink, 
     useNavigate 
@@ -66,24 +67,58 @@ const CollapsibleNav = () => {
                 <Nav 
                     direction="row"
                 >
+                    <Anchor 
+                        icon={<Linkedin/>} 
+                        href='https://www.linkedin.com/in/darayazdani/'  
+                        target='_blank'
+                        style={{
+                            padding: "6px"
+                        }} 
+                    />
+                    <Anchor 
+                        icon={<Github/>} 
+                        href='https://github.com/dyazdani'  
+                        target='_blank'
+                        style={{
+                            padding: "6px"
+                        }} 
+                    />
+                    <Anchor 
+                        icon={<Youtube/>} 
+                        href='https://youtu.be/_61FuWa92Wo' 
+                        target='_blank'
+                        style={{
+                            padding: "6px"
+                        }} 
+                        margin="0 2rem 0 0"
+                    />
                     <NavLink 
                         to="/about"
                     >
                         <Anchor 
-                            label="About" 
+                            label="About"
+                            style={{
+                                padding: "6px"
+                            }} 
                         />
                     </NavLink>
                     <NavLink 
                         to="/projects"
                     >
                         <Anchor 
-                            label="Projects" 
+                            label="Projects"
+                            style={{
+                                padding: "6px"
+                            }}  
                         />
                     </NavLink>
                     <Anchor 
                         href='dara-yazdani-resume.pdf'
                         label="Resume"
                         target="_blank" 
+                        style={{
+                            padding: "6px"
+                        }} 
                     />
                 </Nav>
                 )
