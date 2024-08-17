@@ -1,12 +1,17 @@
 import { 
+  Box,
+  Button,
   Grommet, 
   Heading, 
   Main
 } from 'grommet';
 import theme from './theme';
 import CollapsibleNav from './client/components/CollapsibleNav';
+import Headshot from './client/components/Headshot';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <Grommet 
       theme={theme} 
@@ -16,6 +21,7 @@ function Home() {
         background="#EAD6DF"
       >
         <CollapsibleNav></CollapsibleNav>
+        <Headshot/>
         <Heading 
           alignSelf='center'
         > 
@@ -27,6 +33,49 @@ function Home() {
         >
           I’m a full-stack JavaScript engineer in web.
         </Heading>
+        <Box
+          style={{
+            display: "flex",
+            flexFlow: "row",
+            alignItems: "center",
+            minHeight: "fit-content",
+            minWidth: "400px"
+          }}
+            justify="around"
+            width="30vw"
+            alignSelf='center'
+            margin="2rem 0"
+        >
+          <Button 
+            label="About"
+            margin="1rem"
+            style={{
+              textAlign: "center"
+            }}
+            onClick={() => {
+              navigate('/about');
+            }}
+          />
+          <Button 
+            label="Projects"
+            margin="1rem"
+            style={{
+              textAlign: "center"
+            }}
+            onClick={() => {
+              navigate('/projects');
+            }}
+          />
+          <Button 
+            href="dara-yazdani-resume.pdf"
+            label="Resume"
+            target='_blank'
+            margin="1rem"
+            style={{
+              textAlign: "center",
+            }}
+          />
+        </Box>
       </Main>
     </Grommet>
   )
