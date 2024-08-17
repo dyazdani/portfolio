@@ -39,31 +39,49 @@ const CollapsibleNav = () => {
                 </NavLink>
             </Box>
             <ResponsiveContext.Consumer>
-            {(responsive) =>
-                responsive === 'medium' || responsive === 'small' ? (
-                <Menu
-                    label="Menu"
-                    items={[
-                        { 
-                            label: 'About', 
-                            onClick: () => {
-                                navigate('/about');
-                            }
-                        },
-                        { 
-                            label: 'Projects', 
-                            onClick: () => {
-                                navigate('/projects');
-                            }
-                        },
-                        { 
-                            label: 'Resume', 
-                            href: 'dara-yazdani-resume.pdf',
-                            target: "_blank"
-                        }
-                    ]}
-                />
-                ) : (
+            {(size) => 
+                size === 'small' ? (
+                    <Menu
+                        label="Menu"
+                        items={[
+                            { 
+                                label: 'About', 
+                                onClick: () => {
+                                    navigate('/about');
+                                }
+                            },
+                            { 
+                                label: 'Projects', 
+                                onClick: () => {
+                                    navigate('/projects');
+                                }
+                            },
+                            { 
+                                label: 'Resume', 
+                                href: 'dara-yazdani-resume.pdf',
+                                target: "_blank"
+                            },
+                            { 
+                                icon: <Linkedin/>,
+                                href: 'https://www.linkedin.com/in/darayazdani/' ,
+                                target: "_blank",
+                                alignSelf: "center"
+                            },
+                            { 
+                                icon: <Github/>, 
+                                href:"https://github.com/dyazdani", 
+                                target: "_blank",
+                                alignSelf: "center"
+                            },
+                            { 
+                                icon: <Youtube/>, 
+                                href: "https://youtu.be/_61FuWa92Wo",
+                                target: "_blank",
+                                alignSelf: "center"
+                            },
+                        ]}
+                    />
+                ) : size === "medium" ? (
                 <Nav 
                     direction="row"
                 >
@@ -72,7 +90,8 @@ const CollapsibleNav = () => {
                         href='https://www.linkedin.com/in/darayazdani/'  
                         target='_blank'
                         style={{
-                            padding: "6px"
+                            padding: "6px",
+                            alignSelf: "center"
                         }} 
                     />
                     <Anchor 
@@ -80,7 +99,8 @@ const CollapsibleNav = () => {
                         href='https://github.com/dyazdani'  
                         target='_blank'
                         style={{
-                            padding: "6px"
+                            padding: "6px",
+                            alignSelf: "center"
                         }} 
                     />
                     <Anchor 
@@ -88,41 +108,110 @@ const CollapsibleNav = () => {
                         href='https://youtu.be/_61FuWa92Wo' 
                         target='_blank'
                         style={{
-                            padding: "6px"
+                            padding: "6px",
+                            alignSelf: "center"
                         }} 
-                        margin="0 2rem 0 0"
                     />
-                    <NavLink 
-                        to="/about"
+                    <Menu
+                        label="Menu"
+                        items={[
+                            { 
+                                label: 'About', 
+                                onClick: () => {
+                                    navigate('/about');
+                                }
+                            },
+                            { 
+                                label: 'Projects', 
+                                onClick: () => {
+                                    navigate('/projects');
+                                }
+                            },
+                            { 
+                                label: 'Resume', 
+                                href: 'dara-yazdani-resume.pdf',
+                                target: "_blank"
+                            },
+                            { 
+                                icon: <Linkedin/>,
+                                href: 'https://www.linkedin.com/in/darayazdani/' ,
+                                target: "_blank",
+                                alignSelf: "center",
+                            },
+                            { 
+                                icon: <Github/>, 
+                                href:"https://github.com/dyazdani", 
+                                target: "_blank",
+                                alignSelf: "center"
+                            },
+                            { 
+                                icon: <Youtube/>, 
+                                href: "https://youtu.be/_61FuWa92Wo",
+                                target: "_blank",
+                                alignSelf: "center"
+                            },
+                        ]}
+                    />
+                </Nav>
+            ) : (
+                    <Nav 
+                        direction="row"
                     >
                         <Anchor 
-                            label="About"
+                            icon={<Linkedin/>} 
+                            href='https://www.linkedin.com/in/darayazdani/'  
+                            target='_blank'
                             style={{
                                 padding: "6px"
                             }} 
                         />
-                    </NavLink>
-                    <NavLink 
-                        to="/projects"
-                    >
                         <Anchor 
-                            label="Projects"
+                            icon={<Github/>} 
+                            href='https://github.com/dyazdani'  
+                            target='_blank'
                             style={{
                                 padding: "6px"
-                            }}  
+                            }} 
                         />
-                    </NavLink>
-                    <Anchor 
-                        href='dara-yazdani-resume.pdf'
-                        label="Resume"
-                        target="_blank" 
-                        style={{
-                            padding: "6px"
-                        }} 
-                    />
-                </Nav>
-                )
-            }
+                        <Anchor 
+                            icon={<Youtube/>} 
+                            href='https://youtu.be/_61FuWa92Wo' 
+                            target='_blank'
+                            style={{
+                                padding: "6px"
+                            }} 
+                            margin="0 2rem 0 0"
+                        />
+                        <NavLink 
+                            to="/about"
+                        >
+                            <Anchor 
+                                label="About"
+                                style={{
+                                    padding: "6px"
+                                }} 
+                            />
+                        </NavLink>
+                        <NavLink 
+                            to="/projects"
+                        >
+                            <Anchor 
+                                label="Projects"
+                                style={{
+                                    padding: "6px"
+                                }}  
+                            />
+                        </NavLink>
+                        <Anchor 
+                            href='dara-yazdani-resume.pdf'
+                            label="Resume"
+                            target="_blank" 
+                            style={{
+                                padding: "6px"
+                            }} 
+                        />
+                    </Nav>
+                )}
             </ResponsiveContext.Consumer>
         </Header>
     )
