@@ -10,6 +10,9 @@ const About = () => {
     <Grommet theme={theme} full>   
       <Main
         background="#EAD6DF"
+        style={{
+          height: "100dvh"
+        }}
       >
         <CollapsibleNav/>
         <ResponsiveContext.Consumer>

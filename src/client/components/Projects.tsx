@@ -21,7 +21,7 @@ const Projects = () => {
             <Main
                 background="#EAD6DF"
                 style={{
-                    minHeight: "100vh"
+                    height: "100dvh"
                 }}
                 overflow="auto"
             >
