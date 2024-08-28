@@ -69,7 +69,7 @@ const Contact = () => {
                 label="Email address"
                 name="email"
                 htmlFor="email"
-                error={userEmail && !isValidEmail(userEmail) ? "Please enter valid email address" : ""}
+                error={userEmail && !isValidEmail(userEmail) ? 'Please enter email address with valid format, e.g., "test@example.com"' : ""}
             >
                 <TextInput
                     required
