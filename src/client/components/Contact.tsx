@@ -58,6 +58,7 @@ const Contact = () => {
                 htmlFor="name"
             >
                 <TextInput
+                    required
                     id="name"
                     name="name"
                     value={name}
@@ -68,8 +69,10 @@ const Contact = () => {
                 label="Email address"
                 name="email"
                 htmlFor="email"
+                error={userEmail && !isValidEmail(userEmail) ? "Please enter valid email address" : ""}
             >
                 <TextInput
+                    required
                     id="email"
                     name="email"
                     value={userEmail}
@@ -82,6 +85,7 @@ const Contact = () => {
                 htmlFor="message"
             >
                 <TextArea
+                    required
                     id="message"
                     name="message"
                     value={message}
@@ -90,14 +94,14 @@ const Contact = () => {
             </FormField>
             <Button
                 primary
-                label="Send Message" 
+                label="Submit" 
                 onClick={(e) => {
                     e.preventDefault();
                     submit();
                 }}
-                disabled={!name || !userEmail || !message}
+                disabled={!name || !userEmail || !message || !isValidEmail(userEmail)}
             />
-            {emailSent && <Text>Thank you for your message, we will be in touch in no time!</Text>}
+            {emailSent && <Text>Thank you for your message!</Text>}
         </Form>
     )
 }
