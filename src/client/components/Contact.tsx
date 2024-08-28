@@ -125,6 +125,9 @@ const Contact = () => {
                             <Button
                                 primary
                                 success={emailSent}
+                                messages={{
+                                    "success": "button action succeeded"
+                                }}
                                 label="Submit" 
                                 onClick={(e) => {
                                     e.preventDefault();
