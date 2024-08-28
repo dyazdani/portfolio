@@ -98,7 +98,7 @@ const Contact = () => {
                             label="Email address"
                             name="email"
                             htmlFor="email"
-                            error={userEmail && !isValidEmail(userEmail) ? 'Please enter email address with valid format, e.g., "test@example.com"' : ""}
+                            error={userEmail && !isValidEmail(userEmail) ? 'Enter valid email address - "test@example.com"' : ""}
                         >
                             <TextInput
                                 required
@@ -109,7 +109,7 @@ const Contact = () => {
                             />
                         </FormField>
                         <FormField
-                            label="Your Message"
+                            label="Your message"
                             name="message"
                             htmlFor="message"
                         >
