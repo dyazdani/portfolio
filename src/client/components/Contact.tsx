@@ -51,7 +51,9 @@ const Contact = () => {
     }
 
     return (
-        <Form>
+        <Form
+            onChange={() => setEmailSent(false)}
+        >
             <FormField
                 label="Name"
                 name="name"
