@@ -71,6 +71,9 @@ const Contact = () => {
                 <Box
                     alignSelf="center"
                     width="40vw"
+                    style={{
+                        minWidth: "250px"
+                    }}
                 >
                     <Heading 
                         level={1}
