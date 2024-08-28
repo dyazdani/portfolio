@@ -107,20 +107,21 @@ const Contact = () => {
                             htmlFor="message"
                         >
                             <TextArea
-                                // rows={4}
+                                rows={4}
                                 required
                                 id="message"
                                 name="message"
-                                // style={{
-                                //     backgroundColor: "white"
-                                // }}
+                                style={{
+                                    backgroundColor: "white"
+                                }}
                                 value={message}
                                 onChange={e => setMessage(e.target.value)} 
                             />
                         </FormField>
-                        {/* <Box
-                            alignSelf="center"
-                        > */}
+                        <Box
+                            margin="0 auto"
+                            width="fit-content"
+                        >
                             <Button
                                 primary
                                 success={emailSent}
@@ -131,9 +132,19 @@ const Contact = () => {
                                 }}
                                 disabled={!name || !userEmail || !message || !isValidEmail(userEmail)}
                             />
-                        {/* </Box> */}
+                        </Box>
                         
-                        {emailSent && <Text>Thank you for your message!</Text>}
+                        {emailSent && 
+                            <Box
+                                margin="1rem auto 0 auto"
+                            >
+                                <Text 
+                                    textAlign="center"
+                                >
+                                    Thank you for your message!
+                                </Text>
+                            </Box>  
+                        }
                     </Form>
                 </Box>    
             </Main>
