@@ -126,7 +126,7 @@ const Contact = () => {
                                 primary
                                 success={emailSent}
                                 messages={{
-                                    "success": "button action succeeded"
+                                    "success": "contact message sent successfully"
                                 }}
                                 label="Submit" 
                                 onClick={(e) => {
