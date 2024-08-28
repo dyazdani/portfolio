@@ -6,8 +6,13 @@ import {
     FormField, 
     TextArea, 
     TextInput,
-    Text
+    Text,
+    Main,
+    Grommet,
+    Box
 } from "grommet";
+import CollapsibleNav from "./CollapsibleNav";
+import theme from "../../theme";
 
 // Public key for EmailJS account
 emailjs.init({
@@ -51,60 +56,88 @@ const Contact = () => {
     }
 
     return (
-        <Form
-            onChange={() => setEmailSent(false)}
-        >
-            <FormField
-                label="Name"
-                name="name"
-                htmlFor="name"
-            >
-                <TextInput
-                    required
-                    id="name"
-                    name="name"
-                    value={name}
-                    onChange={e => setName(e.target.value)} 
-                />
-            </FormField>
-            <FormField
-                label="Email address"
-                name="email"
-                htmlFor="email"
-                error={userEmail && !isValidEmail(userEmail) ? 'Please enter email address with valid format, e.g., "test@example.com"' : ""}
-            >
-                <TextInput
-                    required
-                    id="email"
-                    name="email"
-                    value={userEmail}
-                    onChange={e => setUserEmail(e.target.value)} 
-                />
-            </FormField>
-            <FormField
-                label="Your Message"
-                name="message"
-                htmlFor="message"
-            >
-                <TextArea
-                    required
-                    id="message"
-                    name="message"
-                    value={message}
-                    onChange={e => setMessage(e.target.value)} 
-                />
-            </FormField>
-            <Button
-                primary
-                label="Submit" 
-                onClick={(e) => {
-                    e.preventDefault();
-                    submit();
+        <Grommet 
+            theme={theme} 
+            full
+        >   
+            <Main
+                background="#EAD6DF"
+                style={{
+                height: "100dvh"
                 }}
-                disabled={!name || !userEmail || !message || !isValidEmail(userEmail)}
-            />
-            {emailSent && <Text>Thank you for your message!</Text>}
-        </Form>
+            >
+                <CollapsibleNav/>
+                <Box
+                    alignSelf="center"
+                    width="40vw"
+                >
+                    <Form
+                        onChange={() => setEmailSent(false)}
+                    >
+                        <FormField
+                            label="Name"
+                            name="name"
+                            htmlFor="name"
+                        >
+                            <TextInput
+                                required
+                                id="name"
+                                name="name"
+                                value={name}
+                                onChange={e => setName(e.target.value)} 
+                            />
+                        </FormField>
+                        <FormField
+                            label="Email address"
+                            name="email"
+                            htmlFor="email"
+                            error={userEmail && !isValidEmail(userEmail) ? 'Please enter email address with valid format, e.g., "test@example.com"' : ""}
+                        >
+                            <TextInput
+                                required
+                                id="email"
+                                name="email"
+                                value={userEmail}
+                                onChange={e => setUserEmail(e.target.value)} 
+                            />
+                        </FormField>
+                        <FormField
+                            label="Your Message"
+                            name="message"
+                            htmlFor="message"
+                        >
+                            <TextArea
+                                // rows={4}
+                                required
+                                id="message"
+                                name="message"
+                                // style={{
+                                //     backgroundColor: "white"
+                                // }}
+                                value={message}
+                                onChange={e => setMessage(e.target.value)} 
+                            />
+                        </FormField>
+                        {/* <Box
+                            alignSelf="center"
+                        > */}
+                            <Button
+                                primary
+                                success={emailSent}
+                                label="Submit" 
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    submit();
+                                }}
+                                disabled={!name || !userEmail || !message || !isValidEmail(userEmail)}
+                            />
+                        {/* </Box> */}
+                        
+                        {emailSent && <Text>Thank you for your message!</Text>}
+                    </Form>
+                </Box>    
+            </Main>
+        </Grommet>
     )
 }
 
