@@ -8,6 +8,7 @@ import Home from './Home.tsx'
 import './index.css'
 import About from './client/components/About.tsx';
 import Projects from './client/components/Projects.tsx';
+import Contact from './client/components/Contact.tsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/projects",
     element: <Projects/>
+  },
+  {
+    path: "/Contact",
+    element: <Contact/>
   }
 ]);
 
