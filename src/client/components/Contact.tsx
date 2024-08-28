@@ -9,7 +9,8 @@ import {
     Text,
     Main,
     Grommet,
-    Box
+    Box,
+    Heading
 } from "grommet";
 import CollapsibleNav from "./CollapsibleNav";
 import theme from "../../theme";
@@ -71,6 +72,12 @@ const Contact = () => {
                     alignSelf="center"
                     width="40vw"
                 >
+                    <Heading 
+                        level={1}
+                        alignSelf="center"
+                    >
+                        Contact
+                    </Heading>
                     <Form
                         onChange={() => setEmailSent(false)}
                     >
