@@ -8,10 +8,6 @@ import {
     TextInput,
     Text
 } from "grommet";
-import { 
-    Mail, 
-    User 
-} from "grommet-icons";
 
 // Public key for EmailJS account
 emailjs.init({
