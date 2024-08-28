@@ -95,6 +95,7 @@ const Contact = () => {
                     e.preventDefault();
                     submit();
                 }}
+                disabled={!name || !userEmail || !message}
             />
             {emailSent && <Text>Thank you for your message, we will be in touch in no time!</Text>}
         </Form>
