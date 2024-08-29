@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser'
 import ReCAPTCHA from 'react-google-recaptcha';
 import { 
@@ -34,9 +34,7 @@ const Contact = () => {
     const [emailSent, setEmailSent] = useState(false);
     const [captchaValue, setCaptchaValue] = useState<null | string>(null);
 
-    const handleChange = (value: string | null) => {
-        setCaptchaValue(value);
-    }
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
 
     const submit = () => {
         if (name && userEmail && message && captchaValue) {
@@ -60,6 +58,9 @@ const Contact = () => {
             setMessage('');
             setCaptchaValue('');
             setEmailSent(true);
+
+            // reset reCAPTCHA
+            recaptchaRef.current?.reset()
         } else {
             alert('Please fill in all fields.');
         }
@@ -145,8 +146,10 @@ const Contact = () => {
                             width="fit-content"
                         >
                             <ReCAPTCHA
+                                ref={recaptchaRef}
                                 sitekey="6LeveDEqAAAAAPXEgY3mBl57uXHaNr-h9b6AvxJT"
-                                onChange={handleChange}
+                                onChange={(value: string | null) => setCaptchaValue(value)}
+                                onExpired={() => setCaptchaValue('')}
                             />
                         </Box>
 
