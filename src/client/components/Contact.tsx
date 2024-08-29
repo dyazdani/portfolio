@@ -81,7 +81,7 @@ const Contact = () => {
                     alignSelf="center"
                     width="40vw"
                     style={{
-                        minWidth: "250px"
+                        minWidth: "300px"
                     }}
                 >
                     <Heading 
@@ -137,12 +137,18 @@ const Contact = () => {
                                 onChange={e => setMessage(e.target.value)} 
                             />
                         </FormField>
-                        <ReCAPTCHA
-                            sitekey="6LeveDEqAAAAAPXEgY3mBl57uXHaNr-h9b6AvxJT"
-                            onChange={handleChange}
-                        />
                         <Box
-                            margin="0 auto"
+                            margin="0 auto 1rem auto"
+                            width="fit-content"
+                        >
+                            <ReCAPTCHA
+                                sitekey="6LeveDEqAAAAAPXEgY3mBl57uXHaNr-h9b6AvxJT"
+                                onChange={handleChange}
+                            />
+                        </Box>
+
+                        <Box
+                            margin="0 auto 1rem auto"
                             width="fit-content"
                         >
                             <Button
