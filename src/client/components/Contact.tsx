@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from '@emailjs/browser'
+import ReCAPTCHA from 'react-google-recaptcha';
 import { 
     Button,
     Form, 
@@ -25,14 +26,20 @@ const isValidEmail = (email: string) => {
     return regex.test(String(email).toLowerCase())
 }
 
+
 const Contact = () => {
     const [name, setName] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [emailSent, setEmailSent] = useState(false)
-;
+    const [emailSent, setEmailSent] = useState(false);
+    const [captchaValue, setCaptchaValue] = useState<null | string>(null);
+
+    const handleChange = (value: string | null) => {
+        setCaptchaValue(value);
+    }
+
     const submit = () => {
-        if (name && userEmail && message) {
+        if (name && userEmail && message && captchaValue) {
             // Service ID and Template ID from EmailJS account
             const serviceId = 'service_nw7rhn1'
             const templateId = 'template_14kmy4s'
@@ -40,7 +47,8 @@ const Contact = () => {
             const templateParams = {
                 name,
                 userEmail,
-                message
+                message,
+                'g-recaptcha-response': captchaValue
             }
 
             emailjs.send(serviceId, templateId, templateParams)
@@ -50,6 +58,7 @@ const Contact = () => {
             setName('');
             setUserEmail('');
             setMessage('');
+            setCaptchaValue('');
             setEmailSent(true);
         } else {
             alert('Please fill in all fields.');
@@ -128,6 +137,10 @@ const Contact = () => {
                                 onChange={e => setMessage(e.target.value)} 
                             />
                         </FormField>
+                        <ReCAPTCHA
+                            sitekey="6LeveDEqAAAAAPXEgY3mBl57uXHaNr-h9b6AvxJT"
+                            onChange={handleChange}
+                        />
                         <Box
                             margin="0 auto"
                             width="fit-content"
@@ -143,7 +156,7 @@ const Contact = () => {
                                     e.preventDefault();
                                     submit();
                                 }}
-                                disabled={!name || !userEmail || !message || !isValidEmail(userEmail)}
+                                disabled={!name || !userEmail || !message || !isValidEmail(userEmail) || !captchaValue}
                             />
                         </Box>
                         
