@@ -71,7 +71,7 @@ const Contact = () => {
             full
         >   
             <Main
-                background="#EAD6DF"
+                background="#F8F2F4"
                 style={{
                 height: "100dvh"
                 }}
@@ -104,6 +104,7 @@ const Contact = () => {
                                 name="name"
                                 value={name}
                                 onChange={e => setName(e.target.value)} 
+                                focusIndicator
                             />
                         </FormField>
                         <FormField
@@ -118,6 +119,7 @@ const Contact = () => {
                                 name="email"
                                 value={userEmail}
                                 onChange={e => setUserEmail(e.target.value)} 
+                                focusIndicator
                             />
                         </FormField>
                         <FormField
@@ -135,6 +137,7 @@ const Contact = () => {
                                 }}
                                 value={message}
                                 onChange={e => setMessage(e.target.value)} 
+                                focusIndicator
                             />
                         </FormField>
                         <Box
