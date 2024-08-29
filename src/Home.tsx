@@ -26,7 +26,7 @@ function Home() {
       full
     >   
       <Main
-        background="#EAD6DF"
+        background="#F8F2F4"
         style={{
           height: "100dvh"
         }}
