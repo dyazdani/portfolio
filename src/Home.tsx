@@ -12,7 +12,11 @@ import theme from './theme';
 import CollapsibleNav from './client/components/CollapsibleNav';
 import Headshot from './client/components/Headshot';
 import { useNavigate } from 'react-router-dom';
-import { Github, Linkedin, Youtube } from 'grommet-icons';
+import { 
+  Github, 
+  Linkedin, 
+  Youtube 
+} from 'grommet-icons';
 
 function Home() {
   const navigate = useNavigate();
@@ -22,7 +26,7 @@ function Home() {
       full
     >   
       <Main
-        background="#EAD6DF"
+        background="#F8F2F4"
         style={{
           height: "100dvh"
         }}
@@ -47,7 +51,7 @@ function Home() {
               <Box
                 style={{
                   display: "flex",
-                  flexFlow: `${size === "small" ? "column" : "row"}`,
+                  flexFlow: `${size === "medium" || size === "small" ? "column" : "row"}`,
                   alignItems: "center",
                   minHeight: "fit-content",
                   minWidth: "fit-content"
@@ -87,6 +91,17 @@ function Home() {
                   margin="1rem"
                   style={{
                     textAlign: "center",
+                  }}
+                />
+                <Button 
+                  size="large"
+                  label="Contact"
+                  margin="1rem"
+                  style={{
+                    textAlign: "center"
+                  }}
+                  onClick={() => {
+                    navigate('/contact');
                   }}
                 />
               </Box>

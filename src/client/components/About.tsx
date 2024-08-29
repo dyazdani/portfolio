@@ -9,7 +9,7 @@ const About = () => {
   return (
     <Grommet theme={theme} full>   
       <Main
-        background="#EAD6DF"
+        background="#F8F2F4"
         style={{
           height: "100dvh"
         }}
@@ -18,7 +18,7 @@ const About = () => {
         <ResponsiveContext.Consumer>
           {size => (
             <>
-              {size === "medium" || size === "small" || size === "small"? (
+              {size === "medium" || size === "small" ? (
                 <>
                   <Heading 
                     gridArea="title" 

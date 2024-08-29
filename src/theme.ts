@@ -1,5 +1,18 @@
-const theme = {
+import { ThemeType } from "grommet";
+
+const theme: ThemeType = {
     global: {
+      colors: {
+        'status-critical': '#B30302'
+      },
+      focus: {
+        border: {
+          color: {
+            light: "#9D77E4",
+            dark: "#6FFDB0"
+          }
+        }
+      },
       font: {
         family: "Roboto",
         size: "18px",
@@ -18,7 +31,7 @@ const theme = {
         },
         medium: {value: 1000}
       },
-    },
+    }
   }
 
   export default theme;

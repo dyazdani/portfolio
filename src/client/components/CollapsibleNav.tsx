@@ -7,7 +7,11 @@ import {
     Nav, 
     ResponsiveContext 
 } from 'grommet'
-import { Github, Linkedin, Youtube } from 'grommet-icons';
+import { 
+    Github, 
+    Linkedin, 
+    Youtube 
+} from 'grommet-icons';
 import { 
     NavLink, 
     useNavigate 
@@ -60,6 +64,12 @@ const CollapsibleNav = () => {
                                 label: 'Resume', 
                                 href: 'dara-yazdani-resume.pdf',
                                 target: "_blank"
+                            },
+                            { 
+                                label: 'Contact', 
+                                onClick: () => {
+                                    navigate('/contact');
+                                }
                             },
                             { 
                                 icon: <Linkedin/>,
@@ -131,6 +141,12 @@ const CollapsibleNav = () => {
                                 label: 'Resume', 
                                 href: 'dara-yazdani-resume.pdf',
                                 target: "_blank"
+                            },
+                            { 
+                                label: 'Contact', 
+                                onClick: () => {
+                                    navigate('/contact');
+                                }
                             },
                             { 
                                 icon: <Linkedin/>,
@@ -210,6 +226,16 @@ const CollapsibleNav = () => {
                                 padding: "6px"
                             }} 
                         />
+                        <NavLink 
+                            to="/contact"
+                        >
+                            <Anchor 
+                                label="Contact"
+                                style={{
+                                    padding: "6px"
+                                }}  
+                            />
+                        </NavLink>
                     </Nav>
                 )}
             </ResponsiveContext.Consumer>
