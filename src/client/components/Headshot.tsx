@@ -7,6 +7,7 @@ const Headshot = () => {
     return (
         <Box 
             style={{
+                maxHeight: "400px",
                 minWidth: "300px",
                 minHeight: "400px"
             }} 
