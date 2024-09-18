@@ -69,9 +69,9 @@ const About = () => {
                   ]}
                   gap="medium"
                   pad={"large"}
-                  width={"65vw"}
+                  width="1000px"
                   style={{
-                    minWidth: "350px"
+                    minWidth: "350px",
                   }}
                   areas={[
                     { name: 'title', start: [0, 1], end: [1, 1] },
@@ -99,7 +99,6 @@ const About = () => {
                   <Paragraph
                     gridArea='paragraph'
                     fill
-
                   >
                     I love building single-page applications and websites with TypeScript, React, Node, and SQL. <br/><br/>
                   
@@ -113,8 +112,6 @@ const About = () => {
               )} 
             </>
           )}
-
-          
         </ResponsiveContext.Consumer>
       </Main>
     </Grommet>
