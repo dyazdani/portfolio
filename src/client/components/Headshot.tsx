@@ -6,19 +6,16 @@ import {
 const Headshot = () => {
     return (
         <Box 
-            height="fit-content" 
-            width="fit-content"
             style={{
-                maxHeight: "40dvh",
                 minWidth: "300px",
-                minHeight: "300px"
+                minHeight: "400px"
             }} 
             alignSelf="center"
             gridArea="headshot" 
         >
             <Image
                 fit="contain"
-                src="headshot-circle.png"
+                src="headshot-400px.png"
                 margin="medium"
                 alt="Dara Yazdani headshot"
             />
