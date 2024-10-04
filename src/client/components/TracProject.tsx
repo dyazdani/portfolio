@@ -25,7 +25,7 @@ const TracProject = () => {
                     textAlign: "center"
                 }}
             >
-                A full-stack, single-page web application for tracking goals and updating friends on your progress.
+                A fully responsive full-stack single-page web application for tracking goals and updating friends on your progress.
             </Heading>
             <ResponsiveContext.Consumer>
                 {size => (
