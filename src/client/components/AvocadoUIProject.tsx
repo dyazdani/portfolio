@@ -58,14 +58,6 @@ const AvocadoUIProject = () => {
                                 }}
                             />
                         </Box>
-                        <Image 
-                            src="avocado-ui-components.png"
-                            style={{
-                                width: "80vw",
-                                padding: "1rem",
-                                maxWidth: "800px"
-                            }}
-                        />
                         <Heading
                             level={3}
                         >
@@ -119,6 +111,14 @@ const AvocadoUIProject = () => {
                                 </Box>      
                             )
                         }
+                        <Image 
+                            src="avocado-ui-components.png"
+                            style={{
+                                width: "80vw",
+                                padding: "1rem",
+                                maxWidth: "800px"
+                            }}
+                        />
                     </>
                 )}    
             </ResponsiveContext.Consumer>
