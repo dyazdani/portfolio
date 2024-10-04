@@ -58,14 +58,6 @@ const ZoopProject = () => {
                                 }}
                             />
                         </Box>
-                        <Image 
-                            src="zoop-screenshot.png"
-                            style={{
-                                width: "80vw",
-                                padding: "1rem",
-                                maxWidth: "800px"
-                            }}
-                        />
                         <Heading
                             level={3}
                         >
@@ -130,6 +122,14 @@ const ZoopProject = () => {
                                 </Box>      
                             )
                         }
+                        <Image 
+                            src="zoop-screenshot.png"
+                            style={{
+                                width: "80vw",
+                                padding: "1rem",
+                                maxWidth: "800px"
+                            }}
+                        />
                     </>
                 )}    
             </ResponsiveContext.Consumer>
