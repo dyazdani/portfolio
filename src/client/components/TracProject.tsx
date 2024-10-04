@@ -67,14 +67,6 @@ const TracProject = () => {
                                 }}
                             />
                         </Box>
-                        <Image 
-                            src="trac-screenshot.png"
-                            style={{
-                                width: "80vw",
-                                padding: "1rem",
-                                maxWidth: "800px"
-                            }}
-                        />
                         <Heading
                             level={3}
                         >
@@ -141,6 +133,14 @@ const TracProject = () => {
                                 </Box>      
                             )
                         }
+                        <Image 
+                            src="trac-screenshot.png"
+                            style={{
+                                width: "80vw",
+                                padding: "1rem",
+                                maxWidth: "800px"
+                            }}
+                        />
                     </>
                 )}    
             </ResponsiveContext.Consumer>
