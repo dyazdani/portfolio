@@ -226,7 +226,7 @@ const CollapsibleNav = () => {
                             style={{
                                 padding: "6px"
                             }} 
-                            margin="0 2rem 0 0"
+                            margin="2.5px 2rem 0 0"
                         />
                         <NavLink 
                             to="/about"
