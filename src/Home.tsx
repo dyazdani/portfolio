@@ -1,22 +1,15 @@
 import { 
-  Anchor,
   Box,
   Button,
   Grommet, 
   Heading, 
   Main,
-  Nav,
   ResponsiveContext
 } from 'grommet';
 import theme from './theme';
 import CollapsibleNav from './client/components/CollapsibleNav';
 import Headshot from './client/components/Headshot';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Github, 
-  Linkedin, 
-  Youtube 
-} from 'grommet-icons';
 
 function Home() {
   const navigate = useNavigate();
@@ -105,15 +98,6 @@ function Home() {
                   }}
                 />
               </Box>
-              <Nav 
-                direction="row" 
-                pad="medium"
-                alignSelf='center'
-              >
-                <Anchor icon={<Linkedin size='large'/>} href='https://www.linkedin.com/in/darayazdani/'  target='_blank'/>
-                <Anchor icon={<Github size='large'/>} href='https://github.com/dyazdani'  target='_blank'/>
-                <Anchor icon={<Youtube size='large'/>} href='https://youtu.be/_61FuWa92Wo' target='_blank'/>
-              </Nav>
             </>
           )}
         </ResponsiveContext.Consumer>
