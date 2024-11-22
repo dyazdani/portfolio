@@ -12,6 +12,7 @@ import {
     Linkedin, 
     Youtube 
 } from 'grommet-icons';
+import { FaBluesky } from 'react-icons/fa6';
 import { 
     NavLink, 
     useNavigate 
@@ -89,6 +90,12 @@ const CollapsibleNav = () => {
                                 target: "_blank",
                                 alignSelf: "center"
                             },
+                            { 
+                                icon: <FaBluesky/>, 
+                                href: "https://bsky.app/profile/darayazdani.bsky.social",
+                                target: "_blank",
+                                alignSelf: "center"
+                            }
                         ]}
                     />
                 ) : size === "medium" ? (
@@ -116,6 +123,15 @@ const CollapsibleNav = () => {
                     <Anchor 
                         icon={<Youtube/>} 
                         href='https://youtu.be/_61FuWa92Wo' 
+                        target='_blank'
+                        style={{
+                            padding: "6px",
+                            alignSelf: "center"
+                        }} 
+                    />
+                     <Anchor 
+                        icon={<FaBluesky/>} 
+                        href='https://bsky.app/profile/darayazdani.bsky.social' 
                         target='_blank'
                         style={{
                             padding: "6px",
@@ -166,6 +182,12 @@ const CollapsibleNav = () => {
                                 target: "_blank",
                                 alignSelf: "center"
                             },
+                            { 
+                                icon: <FaBluesky/>, 
+                                href: "https://bsky.app/profile/darayazdani.bsky.social",
+                                target: "_blank",
+                                alignSelf: "center"
+                            }
                         ]}
                     />
                 </Nav>
@@ -192,6 +214,14 @@ const CollapsibleNav = () => {
                         <Anchor 
                             icon={<Youtube/>} 
                             href='https://youtu.be/_61FuWa92Wo' 
+                            target='_blank'
+                            style={{
+                                padding: "6px"
+                            }} 
+                        />
+                        <Anchor 
+                            icon={<FaBluesky/>} 
+                            href='https://bsky.app/profile/darayazdani.bsky.social' 
                             target='_blank'
                             style={{
                                 padding: "6px"
